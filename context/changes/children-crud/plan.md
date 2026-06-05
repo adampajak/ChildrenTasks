@@ -318,16 +318,16 @@ Install necessary shadcn/ui primitives, build the ChildrenPanel React island wit
 
 #### Automated
 
-- [x] 3.1 Build succeeds
-- [x] 3.2 Lint passes
+- [x] 3.1 Build succeeds — 130bfec
+- [x] 3.2 Lint passes — 130bfec
 
 #### Manual
 
-- [x] 3.3 Add child via dialog with inline validation
-- [x] 3.4 Children list displays profiles correctly
-- [x] 3.5 Edit child with pre-filled form
-- [x] 3.6 Delete child with optimistic removal
-- [x] 3.7 Optimistic rollback on API failure
-- [x] 3.8 Mobile-responsive layout
-- [x] 3.9 Polish labels for age categories
-- [x] 3.10 Available time inputs accept 0–480 range
+- [x] 3.3 Add child via dialog with inline validation — 130bfec
+- [x] 3.4 Children list displays profiles correctly — 130bfec
+- [x] 3.5 Edit child with pre-filled form — 130bfec
+- [x] 3.6 Delete child with optimistic removal — 130bfec
+- [x] 3.7 Optimistic rollback on API failure — 130bfec
+- [x] 3.8 Mobile-responsive layout — 130bfec
+- [x] 3.9 Polish labels for age categories — 130bfec
+- [x] 3.10 Available time inputs accept 0–480 range — 130bfec

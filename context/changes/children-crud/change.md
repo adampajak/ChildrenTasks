@@ -1,7 +1,7 @@
 ---
 change_id: children-crud
 title: Implement child profiles CRUD (name, age category, availability)
-status: implementing
+status: implemented
 created: 2026-06-05
 updated: 2026-06-05
 archived_at: null
