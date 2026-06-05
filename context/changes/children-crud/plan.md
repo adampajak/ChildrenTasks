@@ -291,28 +291,28 @@ Install necessary shadcn/ui primitives, build the ChildrenPanel React island wit
 
 #### Automated
 
-- [x] 1.1 Migration applies cleanly
-- [x] 1.2 TypeScript compiles
-- [x] 1.3 Lint passes
+- [x] 1.1 Migration applies cleanly — 236bcd1
+- [x] 1.2 TypeScript compiles — 236bcd1
+- [x] 1.3 Lint passes — 236bcd1
 
 #### Manual
 
-- [x] 1.4 RLS policies scope data per-user
-- [x] 1.5 CHECK constraint rejects invalid age_category
+- [x] 1.4 RLS policies scope data per-user — 236bcd1
+- [x] 1.5 CHECK constraint rejects invalid age_category — 236bcd1
 
 ### Phase 2: Backend (Service + API)
 
 #### Automated
 
-- [ ] 2.1 TypeScript compiles
-- [ ] 2.2 Lint passes
+- [x] 2.1 TypeScript compiles
+- [x] 2.2 Lint passes
 
 #### Manual
 
-- [ ] 2.3 CRUD operations work via curl/Postman
-- [ ] 2.4 Invalid input returns 400 with zod errors
-- [ ] 2.5 Unauthenticated request returns 401
-- [ ] 2.6 RLS isolates data between users
+- [x] 2.3 CRUD operations work via curl/Postman
+- [x] 2.4 Invalid input returns 400 with zod errors
+- [x] 2.5 Unauthenticated request returns 401
+- [x] 2.6 RLS isolates data between users
 
 ### Phase 3: UI Components & Integration
 
