@@ -304,30 +304,30 @@ Install necessary shadcn/ui primitives, build the ChildrenPanel React island wit
 
 #### Automated
 
-- [x] 2.1 TypeScript compiles
-- [x] 2.2 Lint passes
+- [x] 2.1 TypeScript compiles — bda4f40
+- [x] 2.2 Lint passes — bda4f40
 
 #### Manual
 
-- [x] 2.3 CRUD operations work via curl/Postman
-- [x] 2.4 Invalid input returns 400 with zod errors
-- [x] 2.5 Unauthenticated request returns 401
-- [x] 2.6 RLS isolates data between users
+- [x] 2.3 CRUD operations work via curl/Postman — bda4f40
+- [x] 2.4 Invalid input returns 400 with zod errors — bda4f40
+- [x] 2.5 Unauthenticated request returns 401 — bda4f40
+- [x] 2.6 RLS isolates data between users — bda4f40
 
 ### Phase 3: UI Components & Integration
 
 #### Automated
 
-- [ ] 3.1 Build succeeds
-- [ ] 3.2 Lint passes
+- [x] 3.1 Build succeeds
+- [x] 3.2 Lint passes
 
 #### Manual
 
-- [ ] 3.3 Add child via dialog with inline validation
-- [ ] 3.4 Children list displays profiles correctly
-- [ ] 3.5 Edit child with pre-filled form
-- [ ] 3.6 Delete child with optimistic removal
-- [ ] 3.7 Optimistic rollback on API failure
-- [ ] 3.8 Mobile-responsive layout
-- [ ] 3.9 Polish labels for age categories
-- [ ] 3.10 Available time inputs accept 0–480 range
+- [x] 3.3 Add child via dialog with inline validation
+- [x] 3.4 Children list displays profiles correctly
+- [x] 3.5 Edit child with pre-filled form
+- [x] 3.6 Delete child with optimistic removal
+- [x] 3.7 Optimistic rollback on API failure
+- [x] 3.8 Mobile-responsive layout
+- [x] 3.9 Polish labels for age categories
+- [x] 3.10 Available time inputs accept 0–480 range

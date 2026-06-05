@@ -59,7 +59,7 @@ export const POST: APIRoute = async (context) => {
   }
 
   try {
-    const child = await createChild(supabase, result.data);
+    const child = await createChild(supabase, user.id, result.data);
     return new Response(JSON.stringify(child), {
       status: 201,
       headers: { "Content-Type": "application/json" },
