@@ -12,11 +12,7 @@ export async function listChildren(supabase: SupabaseClient): Promise<Child[]> {
   return data as Child[];
 }
 
-export async function createChild(
-  supabase: SupabaseClient,
-  userId: string,
-  input: CreateChildInput,
-): Promise<Child> {
+export async function createChild(supabase: SupabaseClient, userId: string, input: CreateChildInput): Promise<Child> {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { data, error } = await supabase
     .from("children")
