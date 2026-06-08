@@ -53,7 +53,7 @@ export function ChildForm({ defaultValues, onSubmit, isSubmitting }: ChildFormPr
       available_time: DEFAULT_AVAILABLE_TIME,
     },
   });
-  
+
   const ageCategory = useWatch({ control, name: "age_category" });
 
   return (
