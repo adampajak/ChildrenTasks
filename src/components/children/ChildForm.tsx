@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { childFormSchema, type ChildFormValues } from "@/lib/schemas/children.schema";
 import { Input } from "@/components/ui/input";
@@ -43,7 +43,7 @@ export function ChildForm({ defaultValues, onSubmit, isSubmitting }: ChildFormPr
     register,
     handleSubmit,
     setValue,
-    watch,
+    control,
     formState: { errors },
   } = useForm<ChildFormValues>({
     resolver: zodResolver(childFormSchema),
@@ -54,7 +54,7 @@ export function ChildForm({ defaultValues, onSubmit, isSubmitting }: ChildFormPr
     },
   });
 
-  const ageCategory = watch("age_category");
+  const ageCategory = useWatch({ control, name: "age_category" });
 
   return (
     <form onSubmit={(e) => void handleSubmit(onSubmit)(e)} className="space-y-4">
