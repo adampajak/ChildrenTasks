@@ -31,3 +31,4 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 idea-notes.md
+.claude/*
