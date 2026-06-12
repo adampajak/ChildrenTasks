@@ -257,13 +257,13 @@ Note: `new Date().toISOString()` is correct here — this is an event timestamp 
 
 #### Automated
 
-- [x] 3.1 TypeScript build passes: `npm run build`
-- [x] 3.2 Lint passes: `npm run lint`
+- [x] 3.1 TypeScript build passes: `npm run build` — fadc1f4
+- [x] 3.2 Lint passes: `npm run lint` — fadc1f4
 
 #### Manual
 
-- [x] 3.3 Tapping circle marks task done (strikethrough + dim)
-- [x] 3.4 Tapping checkmark un-marks task
-- [x] 3.5 Completion state visible in both TodayView and WeekView
-- [x] 3.6 Full reload preserves completion state
-- [x] 3.7 No regressions in Today view, WeekView, generate/regenerate
+- [x] 3.3 Tapping circle marks task done (strikethrough + dim) — fadc1f4
+- [x] 3.4 Tapping checkmark un-marks task — fadc1f4
+- [x] 3.5 Completion state visible in both TodayView and WeekView — fadc1f4
+- [x] 3.6 Full reload preserves completion state — fadc1f4
+- [x] 3.7 No regressions in Today view, WeekView, generate/regenerate — fadc1f4
