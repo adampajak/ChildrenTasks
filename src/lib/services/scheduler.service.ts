@@ -153,6 +153,23 @@ export async function getScheduleForWeek(
   return (data as SupabaseScheduleRow[]).map(toView);
 }
 
+export async function toggleCompletion(
+  supabase: SupabaseClient,
+  id: string,
+  userId: string,
+  completedAt: string | null,
+): Promise<void> {
+  const { error } = await supabase
+    .from("schedule_assignments")
+    .update({ completed_at: completedAt })
+    .eq("id", id)
+    .eq("user_id", userId);
+
+  if (error) {
+    throw new Error(`Failed to update completion: ${error.message}`);
+  }
+}
+
 export async function generateAndPersistSchedule(
   supabase: SupabaseClient,
   userId: string,

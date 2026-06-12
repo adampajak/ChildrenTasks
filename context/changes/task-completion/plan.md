@@ -233,25 +233,25 @@ Note: `new Date().toISOString()` is correct here — this is an event timestamp 
 
 #### Automated
 
-- [x] 1.1 TypeScript build passes: `npm run build`
-- [x] 1.2 Lint passes: `npm run lint`
+- [x] 1.1 TypeScript build passes: `npm run build` — 238b6e0
+- [x] 1.2 Lint passes: `npm run lint` — 238b6e0
 
 #### Manual
 
-- [x] 1.3 Migration applies cleanly: `npx supabase db reset`
+- [x] 1.3 Migration applies cleanly: `npx supabase db reset` — 238b6e0
 
 ### Phase 2: API & Service
 
 #### Automated
 
-- [ ] 2.1 TypeScript build passes: `npm run build`
-- [ ] 2.2 Lint passes: `npm run lint`
+- [x] 2.1 TypeScript build passes: `npm run build`
+- [x] 2.2 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 2.3 PATCH with `completed_at` timestamp returns 200
-- [ ] 2.4 PATCH with `null` returns 200 (undo)
-- [ ] 2.5 Unauthenticated PATCH returns 401
+- [x] 2.3 PATCH with `completed_at` timestamp returns 200
+- [x] 2.4 PATCH with `null` returns 200 (undo)
+- [x] 2.5 Unauthenticated PATCH returns 401
 
 ### Phase 3: UI
 

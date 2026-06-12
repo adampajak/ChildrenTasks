@@ -8,6 +8,8 @@ interface UseScheduleReturn {
   isGenerating: boolean;
   error: string | null;
   generate: () => Promise<void>;
+  reloadSchedule: () => Promise<void>;
+  toggleCompletion: (id: string, completedAt: string | null) => Promise<void>;
 }
 
 export function useSchedule(): UseScheduleReturn {
@@ -16,6 +18,14 @@ export function useSchedule(): UseScheduleReturn {
   const [isLoading, setIsLoading] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const reloadSchedule = async () => {
+    const res = await fetch("/api/schedule");
+    if (!res.ok) throw new Error("Nie udało się wczytać harmonogramu");
+    const data = (await res.json()) as ScheduleAssignmentView[];
+    setAssignments(data);
+    setError(null);
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -65,5 +75,15 @@ export function useSchedule(): UseScheduleReturn {
     }
   };
 
-  return { assignments, warnings, isLoading, isGenerating, error, generate };
+  const toggleCompletion = async (id: string, completedAt: string | null) => {
+    const res = await fetch(`/api/schedule/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ completed_at: completedAt }),
+    });
+    if (!res.ok) throw new Error("Nie udało się zaktualizować zadania");
+    await reloadSchedule();
+  };
+
+  return { assignments, warnings, isLoading, isGenerating, error, generate, reloadSchedule, toggleCompletion };
 }
