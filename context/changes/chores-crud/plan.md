@@ -258,29 +258,29 @@ No existing data to migrate. Migration file timestamp `20260612000001` places it
 
 #### Automated
 
-- [x] 2.1 TypeScript compiles: `npm run build`
-- [x] 2.2 Lint passes: `npm run lint`
+- [x] 2.1 TypeScript compiles: `npm run build` — 8d6fbc6
+- [x] 2.2 Lint passes: `npm run lint` — 8d6fbc6
 
 #### Manual
 
-- [x] 2.3 CRUD operations work via curl/Postman (GET 200, POST 201, PUT 200, DELETE 204)
-- [x] 2.4 Invalid input returns 400 with zod errors
-- [x] 2.5 Unauthenticated request returns 401
-- [x] 2.6 RLS isolates data between users
+- [x] 2.3 CRUD operations work via curl/Postman (GET 200, POST 201, PUT 200, DELETE 204) — 8d6fbc6
+- [x] 2.4 Invalid input returns 400 with zod errors — 8d6fbc6
+- [x] 2.5 Unauthenticated request returns 401 — 8d6fbc6
+- [x] 2.6 RLS isolates data between users — 8d6fbc6
 
 ### Phase 3: UI Components & Dashboard Integration
 
 #### Automated
 
-- [ ] 3.1 Build succeeds: `npm run build`
-- [ ] 3.2 Lint passes: `npm run lint`
+- [x] 3.1 Build succeeds: `npm run build`
+- [x] 3.2 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 3.3 Add chore via dialog with inline validation
-- [ ] 3.4 Chores list displays correctly
-- [ ] 3.5 Edit chore with pre-filled form
-- [ ] 3.6 Delete chore with optimistic removal
-- [ ] 3.7 Optimistic rollback on API failure
-- [ ] 3.8 Mobile-responsive layout
-- [ ] 3.9 No regressions in ChildrenPanel
+- [x] 3.3 Add chore via dialog with inline validation
+- [x] 3.4 Chores list displays correctly
+- [x] 3.5 Edit chore with pre-filled form
+- [x] 3.6 Delete chore with optimistic removal
+- [x] 3.7 Optimistic rollback on API failure
+- [x] 3.8 Mobile-responsive layout
+- [x] 3.9 No regressions in ChildrenPanel
