@@ -233,12 +233,12 @@ Note: `new Date().toISOString()` is correct here — this is an event timestamp 
 
 #### Automated
 
-- [ ] 1.1 TypeScript build passes: `npm run build`
-- [ ] 1.2 Lint passes: `npm run lint`
+- [x] 1.1 TypeScript build passes: `npm run build`
+- [x] 1.2 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 1.3 Migration applies cleanly: `npx supabase db reset`
+- [x] 1.3 Migration applies cleanly: `npx supabase db reset`
 
 ### Phase 2: API & Service
 

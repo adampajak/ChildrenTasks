@@ -28,6 +28,7 @@ export interface ScheduleAssignment {
   assignment_date: string;
   child_id: string;
   chore_id: string;
+  completed_at: string | null;
   created_at: string;
   updated_at: string;
 }

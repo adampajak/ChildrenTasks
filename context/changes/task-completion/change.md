@@ -1,7 +1,7 @@
 ---
 change_id: task-completion
 title: Mark chore assignments as done
-status: planned
+status: implementing
 created: 2026-06-12
 updated: 2026-06-12
 archived_at: null

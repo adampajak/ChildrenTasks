@@ -110,6 +110,7 @@ interface SupabaseScheduleRow {
   assignment_date: string;
   child_id: string;
   chore_id: string;
+  completed_at: string | null;
   created_at: string;
   updated_at: string;
   children: { name: string };
@@ -124,6 +125,7 @@ function toView(row: SupabaseScheduleRow): ScheduleAssignmentView {
     assignment_date: row.assignment_date,
     child_id: row.child_id,
     chore_id: row.chore_id,
+    completed_at: row.completed_at ?? null,
     created_at: row.created_at,
     updated_at: row.updated_at,
     child_name: row.children.name,
