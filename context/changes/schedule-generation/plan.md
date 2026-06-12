@@ -431,31 +431,31 @@ idempotent (delete-then-insert), so no stale rows accumulate.
 
 #### Automated
 
-- [x] 1.1 Migration applies cleanly: `npx supabase db reset`
-- [x] 1.2 TypeScript build passes: `npm run build`
-- [x] 1.3 Lint passes: `npm run lint`
+- [x] 1.1 Migration applies cleanly: `npx supabase db reset` — b60a896
+- [x] 1.2 TypeScript build passes: `npm run build` — b60a896
+- [x] 1.3 Lint passes: `npm run lint` — b60a896
 
 #### Manual
 
-- [x] 1.4 Confirm `schedule_assignments` table + all RLS policies exist in Supabase Studio
-- [x] 1.5 Confirm cross-user RLS isolation (SELECT returns 0 rows for another user)
+- [x] 1.4 Confirm `schedule_assignments` table + all RLS policies exist in Supabase Studio — b60a896
+- [x] 1.5 Confirm cross-user RLS isolation (SELECT returns 0 rows for another user) — b60a896
 
 ### Phase 2: Scheduler Service + API Routes
 
 #### Automated
 
-- [ ] 2.1 TypeScript build passes: `npm run build`
-- [ ] 2.2 Lint passes: `npm run lint`
+- [x] 2.1 TypeScript build passes: `npm run build`
+- [x] 2.2 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 2.3 POST /api/schedule/generate returns 200 with `assignments` + `warnings` arrays
-- [ ] 2.4 Assignments cover Mon–Sun of current week with correct `week_start_date`
-- [ ] 2.5 No age-category violations in returned assignments
-- [ ] 2.6 No child's daily minutes exceed their `available_time` for that day
-- [ ] 2.7 GET /api/schedule returns enriched assignments (`child_name`, `chore_name`, `chore_time`)
-- [ ] 2.8 Re-running generate replaces existing rows without duplicates
-- [ ] 2.9 Unschedulable chore appears in `warnings`
+- [x] 2.3 POST /api/schedule/generate returns 200 with `assignments` + `warnings` arrays
+- [x] 2.4 Assignments cover Mon–Sun of current week with correct `week_start_date`
+- [x] 2.5 No age-category violations in returned assignments
+- [x] 2.6 No child's daily minutes exceed their `available_time` for that day
+- [x] 2.7 GET /api/schedule returns enriched assignments (`child_name`, `chore_name`, `chore_time`)
+- [x] 2.8 Re-running generate replaces existing rows without duplicates
+- [x] 2.9 Unschedulable chore appears in `warnings`
 
 ### Phase 3: Schedule Page + Dashboard Navigation
 
