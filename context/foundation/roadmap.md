@@ -3,7 +3,7 @@ project: "ChildrensTasks"
 version: 1
 status: draft
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-12
 prd_version: 1
 main_goal: market-feedback
 top_blocker: none
@@ -27,7 +27,7 @@ Rodzic wielodzietnej rodziny potrzebuje narzędzia, które automatycznie generuj
 
 | ID | Change ID | Outcome (user can …) | Prerequisites | PRD refs | Status |
 |---|---|---|---|---|---|
-| S-01 | children-crud | zdefiniować profile dzieci (imię, kategoria wiekowa, dostępność) | — | FR-001, FR-008, US-01 | ready |
+| S-01 | children-crud | zdefiniować profile dzieci (imię, kategoria wiekowa, dostępność) | — | FR-001, FR-008, US-01 | done |
 | S-02 | chores-crud | zdefiniować obowiązki (nazwa, kategoria wiekowa, częstotliwość, czas) | — | FR-002, US-01 | ready |
 | S-03 | schedule-generation | wygenerować tygodniowy harmonogram i zobaczyć plan na dziś / cały tydzień | S-01, S-02 | FR-003, FR-004, US-01 | proposed |
 | S-04 | schedule-manual-adjust | ręcznie przenieść lub zmienić przypisanie po generacji | S-03 | FR-010, US-01 | proposed |
@@ -71,7 +71,7 @@ Brak wyodrębnionych foundations. Wszystkie warstwy cross-cutting (auth, deploy,
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Pierwszy slice ustanawiający wzorzec migracji Supabase + RLS. Jeśli wzorzec będzie zły, kolejne slices odziedziczą problem. Mitygacja: prosty schemat (1 tabela, 1 policy), łatwy do korekty.
-- **Status:** ready
+- **Status:** done
 
 ### S-02: Definicja obowiązków domowych
 
@@ -156,4 +156,4 @@ Brak wyodrębnionych foundations. Wszystkie warstwy cross-cutting (auth, deploy,
 
 ## Done
 
-(Empty on first generation. `/10x-archive` appends entries here when a change is archived.)
+- **S-01: user can create, edit, and delete child profiles (name, age category, available time per weekday)** — Archived 2026-06-12 → `context/archive/2026-06-05-children-crud/`. Lesson: —.
