@@ -14,14 +14,22 @@ const { user } = Astro.locals;
           <h1 class="text-2xl font-bold text-white">Dashboard</h1>
           <p class="text-sm text-blue-100/60">{user?.email}</p>
         </div>
-        <form method="POST" action="/api/auth/signout">
-          <button
-            type="submit"
+        <div class="flex items-center gap-2">
+          <a
+            href="/schedule"
             class="rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm text-white transition-colors hover:bg-white/20"
           >
-            Wyloguj
-          </button>
-        </form>
+            Harmonogram
+          </a>
+          <form method="POST" action="/api/auth/signout">
+            <button
+              type="submit"
+              class="rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm text-white transition-colors hover:bg-white/20"
+            >
+              Wyloguj
+            </button>
+          </form>
+        </div>
       </div>
 
       <div class="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl md:p-6">

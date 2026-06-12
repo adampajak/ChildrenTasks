@@ -20,3 +20,27 @@ export interface Chore {
   updated_at: string;
   deleted_at: string | null;
 }
+
+export interface ScheduleAssignment {
+  id: string;
+  user_id: string;
+  week_start_date: string;
+  assignment_date: string;
+  child_id: string;
+  chore_id: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ScheduleAssignmentView extends ScheduleAssignment {
+  child_name: string;
+  chore_name: string;
+  chore_time: number;
+}
+
+export interface ScheduleWarning {
+  chore_id: string;
+  chore_name: string;
+  placed: number;
+  needed: number;
+}
