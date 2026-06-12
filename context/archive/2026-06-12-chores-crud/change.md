@@ -1,10 +1,10 @@
 ---
 change_id: chores-crud
 title: Chores crud
-status: implemented
+status: archived
 created: 2026-06-12
 updated: 2026-06-12
-archived_at: null
+archived_at: 2026-06-12T10:30:36Z
 ---
 
 ## Notes
