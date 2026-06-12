@@ -3,9 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface Props {
   assignments: ScheduleAssignmentView[];
+  onFocusChild?: (child: { id: string; name: string }) => void;
 }
 
-export function TodayView({ assignments }: Props) {
+export function TodayView({ assignments, onFocusChild }: Props) {
   const today = new Intl.DateTimeFormat("en-CA").format(new Date());
   const todayAssignments = assignments.filter((a) => a.assignment_date === today);
 
@@ -25,7 +26,20 @@ export function TodayView({ assignments }: Props) {
         return (
           <Card key={child.id}>
             <CardHeader className="pb-2">
-              <CardTitle className="text-base">{child.name}</CardTitle>
+              <CardTitle className="text-base">
+                {onFocusChild ? (
+                  <button
+                    className="cursor-pointer hover:underline"
+                    onClick={() => {
+                      onFocusChild(child);
+                    }}
+                  >
+                    {child.name}
+                  </button>
+                ) : (
+                  child.name
+                )}
+              </CardTitle>
             </CardHeader>
             <CardContent>
               {chores.length === 0 ? (
