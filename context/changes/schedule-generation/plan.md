@@ -461,16 +461,16 @@ idempotent (delete-then-insert), so no stale rows accumulate.
 
 #### Automated
 
-- [x] 3.1 TypeScript build passes: `npm run build`
-- [x] 3.2 Lint passes: `npm run lint`
+- [x] 3.1 TypeScript build passes: `npm run build` — f2c78c9
+- [x] 3.2 Lint passes: `npm run lint` — f2c78c9
 
 #### Manual
 
-- [x] 3.3 Unauthenticated /schedule redirects to sign-in
-- [x] 3.4 Empty state with Generate button shown when no schedule exists
-- [x] 3.5 Generate button creates schedule; Today tab shows child cards
-- [x] 3.6 This Week tab shows day × child grid
-- [x] 3.7 Warning banner appears for unschedulable chores
-- [x] 3.8 Second Generate replaces schedule silently
-- [x] 3.9 Dashboard "Harmonogram" link navigates to /schedule
-- [x] 3.10 Weekly grid scrolls horizontally on 375px mobile viewport
+- [x] 3.3 Unauthenticated /schedule redirects to sign-in — f2c78c9
+- [x] 3.4 Empty state with Generate button shown when no schedule exists — f2c78c9
+- [x] 3.5 Generate button creates schedule; Today tab shows child cards — f2c78c9
+- [x] 3.6 This Week tab shows day × child grid — f2c78c9
+- [x] 3.7 Warning banner appears for unschedulable chores — f2c78c9
+- [x] 3.8 Second Generate replaces schedule silently — f2c78c9
+- [x] 3.9 Dashboard "Harmonogram" link navigates to /schedule — f2c78c9
+- [x] 3.10 Weekly grid scrolls horizontally on 375px mobile viewport — f2c78c9
