@@ -272,15 +272,15 @@ No existing data to migrate. Migration file timestamp `20260612000001` places it
 
 #### Automated
 
-- [x] 3.1 Build succeeds: `npm run build`
-- [x] 3.2 Lint passes: `npm run lint`
+- [x] 3.1 Build succeeds: `npm run build` — 412e331
+- [x] 3.2 Lint passes: `npm run lint` — 412e331
 
 #### Manual
 
-- [x] 3.3 Add chore via dialog with inline validation
-- [x] 3.4 Chores list displays correctly
-- [x] 3.5 Edit chore with pre-filled form
-- [x] 3.6 Delete chore with optimistic removal
-- [x] 3.7 Optimistic rollback on API failure
-- [x] 3.8 Mobile-responsive layout
-- [x] 3.9 No regressions in ChildrenPanel
+- [x] 3.3 Add chore via dialog with inline validation — 412e331
+- [x] 3.4 Chores list displays correctly — 412e331
+- [x] 3.5 Edit chore with pre-filled form — 412e331
+- [x] 3.6 Delete chore with optimistic removal — 412e331
+- [x] 3.7 Optimistic rollback on API failure — 412e331
+- [x] 3.8 Mobile-responsive layout — 412e331
+- [x] 3.9 No regressions in ChildrenPanel — 412e331
