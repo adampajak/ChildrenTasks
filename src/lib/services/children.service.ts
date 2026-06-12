@@ -1,6 +1,9 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Child } from "@/types";
 import type { CreateChildInput, UpdateChildInput } from "@/lib/schemas/children.schema";
+import { NotFoundError } from "@/lib/services/errors";
+
+export { NotFoundError };
 
 export async function listChildren(supabase: SupabaseClient): Promise<Child[]> {
   const { data, error } = await supabase.from("children").select("*").order("created_at", { ascending: true });
@@ -53,12 +56,5 @@ export async function deleteChild(supabase: SupabaseClient, id: string): Promise
       throw new NotFoundError(`Child not found: ${id}`);
     }
     throw new Error(`Failed to delete child: ${error.message}`);
-  }
-}
-
-export class NotFoundError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "NotFoundError";
   }
 }

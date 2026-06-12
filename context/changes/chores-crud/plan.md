@@ -246,27 +246,27 @@ No existing data to migrate. Migration file timestamp `20260612000001` places it
 
 #### Automated
 
-- [x] 1.1 Migration applies cleanly: `npx supabase db reset`
-- [x] 1.2 TypeScript compiles: `npm run build`
-- [x] 1.3 Lint passes: `npm run lint`
+- [x] 1.1 Migration applies cleanly: `npx supabase db reset` — bfd57d5
+- [x] 1.2 TypeScript compiles: `npm run build` — bfd57d5
+- [x] 1.3 Lint passes: `npm run lint` — bfd57d5
 
 #### Manual
 
-- [x] 1.4 Supabase Studio confirms chores table, CHECK constraints, RLS enabled, four policies
+- [x] 1.4 Supabase Studio confirms chores table, CHECK constraints, RLS enabled, four policies — bfd57d5
 
 ### Phase 2: Backend — Service Layer & API Routes
 
 #### Automated
 
-- [ ] 2.1 TypeScript compiles: `npm run build`
-- [ ] 2.2 Lint passes: `npm run lint`
+- [x] 2.1 TypeScript compiles: `npm run build`
+- [x] 2.2 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 2.3 CRUD operations work via curl/Postman (GET 200, POST 201, PUT 200, DELETE 204)
-- [ ] 2.4 Invalid input returns 400 with zod errors
-- [ ] 2.5 Unauthenticated request returns 401
-- [ ] 2.6 RLS isolates data between users
+- [x] 2.3 CRUD operations work via curl/Postman (GET 200, POST 201, PUT 200, DELETE 204)
+- [x] 2.4 Invalid input returns 400 with zod errors
+- [x] 2.5 Unauthenticated request returns 401
+- [x] 2.6 RLS isolates data between users
 
 ### Phase 3: UI Components & Dashboard Integration
 
