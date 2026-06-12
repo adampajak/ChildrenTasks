@@ -167,3 +167,4 @@ Known improvement items from impl-reviews — not blocking, but should be addres
 
 - **S-01: user can create, edit, and delete child profiles (name, age category, available time per weekday)** — Archived 2026-06-12 → `context/archive/2026-06-05-children-crud/`. Lesson: —.
 - **S-02: user can create, edit, and delete chores (name, age category [małe/średnie/duże], min weekly frequency, time to complete)** — Archived 2026-06-12 → `context/archive/2026-06-12-chores-crud/`. Lesson: —.
+- **S-03: user can generate a weekly chore schedule respecting age/time/frequency constraints, then view today's tasks across all children and the full weekly schedule** — Archived 2026-06-12 → `context/archive/2026-06-12-schedule-generation/`. Lesson: —.
