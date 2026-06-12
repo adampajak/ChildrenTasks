@@ -444,33 +444,33 @@ idempotent (delete-then-insert), so no stale rows accumulate.
 
 #### Automated
 
-- [x] 2.1 TypeScript build passes: `npm run build`
-- [x] 2.2 Lint passes: `npm run lint`
+- [x] 2.1 TypeScript build passes: `npm run build` — d8519df
+- [x] 2.2 Lint passes: `npm run lint` — d8519df
 
 #### Manual
 
-- [x] 2.3 POST /api/schedule/generate returns 200 with `assignments` + `warnings` arrays
-- [x] 2.4 Assignments cover Mon–Sun of current week with correct `week_start_date`
-- [x] 2.5 No age-category violations in returned assignments
-- [x] 2.6 No child's daily minutes exceed their `available_time` for that day
-- [x] 2.7 GET /api/schedule returns enriched assignments (`child_name`, `chore_name`, `chore_time`)
-- [x] 2.8 Re-running generate replaces existing rows without duplicates
-- [x] 2.9 Unschedulable chore appears in `warnings`
+- [x] 2.3 POST /api/schedule/generate returns 200 with `assignments` + `warnings` arrays — d8519df
+- [x] 2.4 Assignments cover Mon–Sun of current week with correct `week_start_date` — d8519df
+- [x] 2.5 No age-category violations in returned assignments — d8519df
+- [x] 2.6 No child's daily minutes exceed their `available_time` for that day — d8519df
+- [x] 2.7 GET /api/schedule returns enriched assignments (`child_name`, `chore_name`, `chore_time`) — d8519df
+- [x] 2.8 Re-running generate replaces existing rows without duplicates — d8519df
+- [x] 2.9 Unschedulable chore appears in `warnings` — d8519df
 
 ### Phase 3: Schedule Page + Dashboard Navigation
 
 #### Automated
 
-- [ ] 3.1 TypeScript build passes: `npm run build`
-- [ ] 3.2 Lint passes: `npm run lint`
+- [x] 3.1 TypeScript build passes: `npm run build`
+- [x] 3.2 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 3.3 Unauthenticated /schedule redirects to sign-in
-- [ ] 3.4 Empty state with Generate button shown when no schedule exists
-- [ ] 3.5 Generate button creates schedule; Today tab shows child cards
-- [ ] 3.6 This Week tab shows day × child grid
-- [ ] 3.7 Warning banner appears for unschedulable chores
-- [ ] 3.8 Second Generate replaces schedule silently
-- [ ] 3.9 Dashboard "Harmonogram" link navigates to /schedule
-- [ ] 3.10 Weekly grid scrolls horizontally on 375px mobile viewport
+- [x] 3.3 Unauthenticated /schedule redirects to sign-in
+- [x] 3.4 Empty state with Generate button shown when no schedule exists
+- [x] 3.5 Generate button creates schedule; Today tab shows child cards
+- [x] 3.6 This Week tab shows day × child grid
+- [x] 3.7 Warning banner appears for unschedulable chores
+- [x] 3.8 Second Generate replaces schedule silently
+- [x] 3.9 Dashboard "Harmonogram" link navigates to /schedule
+- [x] 3.10 Weekly grid scrolls horizontally on 375px mobile viewport
