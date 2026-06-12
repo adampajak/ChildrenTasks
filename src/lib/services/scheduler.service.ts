@@ -110,6 +110,7 @@ interface SupabaseScheduleRow {
   assignment_date: string;
   child_id: string;
   chore_id: string;
+  completed_at: string | null;
   created_at: string;
   updated_at: string;
   children: { name: string };
@@ -124,6 +125,7 @@ function toView(row: SupabaseScheduleRow): ScheduleAssignmentView {
     assignment_date: row.assignment_date,
     child_id: row.child_id,
     chore_id: row.chore_id,
+    completed_at: row.completed_at ?? null,
     created_at: row.created_at,
     updated_at: row.updated_at,
     child_name: row.children.name,
@@ -149,6 +151,23 @@ export async function getScheduleForWeek(
   }
 
   return (data as SupabaseScheduleRow[]).map(toView);
+}
+
+export async function toggleCompletion(
+  supabase: SupabaseClient,
+  id: string,
+  userId: string,
+  completedAt: string | null,
+): Promise<void> {
+  const { error } = await supabase
+    .from("schedule_assignments")
+    .update({ completed_at: completedAt })
+    .eq("id", id)
+    .eq("user_id", userId);
+
+  if (error) {
+    throw new Error(`Failed to update completion: ${error.message}`);
+  }
 }
 
 export async function generateAndPersistSchedule(
