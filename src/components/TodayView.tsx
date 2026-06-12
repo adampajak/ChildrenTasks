@@ -6,7 +6,7 @@ interface Props {
 }
 
 export function TodayView({ assignments }: Props) {
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Intl.DateTimeFormat("en-CA").format(new Date());
   const todayAssignments = assignments.filter((a) => a.assignment_date === today);
 
   // All children who appear anywhere in the weekly schedule

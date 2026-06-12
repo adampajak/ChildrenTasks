@@ -29,7 +29,7 @@ Rodzic wielodzietnej rodziny potrzebuje narzędzia, które automatycznie generuj
 |---|---|---|---|---|---|
 | S-01 | children-crud | zdefiniować profile dzieci (imię, kategoria wiekowa, dostępność) | — | FR-001, FR-008, US-01 | done |
 | S-02 | chores-crud | zdefiniować obowiązki (nazwa, kategoria wiekowa, częstotliwość, czas) | — | FR-002, US-01 | done |
-| S-03 | schedule-generation | wygenerować tygodniowy harmonogram i zobaczyć plan na dziś / cały tydzień | S-01, S-02 | FR-003, FR-004, US-01 | proposed |
+| S-03 | schedule-generation | wygenerować tygodniowy harmonogram i zobaczyć plan na dziś / cały tydzień | S-01, S-02 | FR-003, FR-004, US-01 | done |
 | S-04 | schedule-manual-adjust | ręcznie przenieść lub zmienić przypisanie po generacji | S-03 | FR-010, US-01 | proposed |
 | S-05 | child-daily-view | przełączyć na widok jednego dziecka z zadaniami na dziś | S-03 | FR-006 | proposed |
 | S-06 | task-completion | oznaczyć zadanie jako wykonane z dowolnego widoku | S-03 | FR-007 | proposed |
@@ -95,7 +95,7 @@ Brak wyodrębnionych foundations. Wszystkie warstwy cross-cutting (auth, deploy,
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Algorytm schedulera to serce produktu — PRD Business Logic jest dobrze opisany (round-robin z filtrem wiekowym i limitem czasu), ale implementacja może ujawnić edge-case'y (np. brak eligible children na dany dzień). Mitygacja: algorytm deterministyczny, testowalny jednostkowo.
-- **Status:** proposed
+- **Status:** done
 
 ### S-04: Ręczna korekta harmonogramu
 
@@ -147,6 +147,15 @@ Brak wyodrębnionych foundations. Wszystkie warstwy cross-cutting (auth, deploy,
 ## Open Roadmap Questions
 
 1. **Jaki jest budżet czasowy (mvp_weeks, hard_deadline, after_hours_only)?** — Owner: user. Block: roadmap-wide (nie blokuje planowania, ale wpływa na priorytetyzację jeśli czas jest ograniczony).
+
+## Tech Debt
+
+Known improvement items from impl-reviews — not blocking, but should be addressed before the feature set completes.
+
+| ID | Change ID | Finding | Location | Fix |
+|---|---|---|---|---|
+| TD-01 | schedule-generation | Non-atomic schedule replace — delete runs before insert; a failed insert leaves an empty schedule | `src/lib/services/scheduler.service.ts:154–180` | Swap order to insert-then-delete so old data is always the fallback on failure |
+| TD-02 | schedule-generation | Algorithm front-loads chores to Mon/Tue/Wed — 3×/week chores never land Thu–Sun | `src/lib/services/scheduler.service.ts:65–95` | Randomize or rotate day-scan start index per chore |
 
 ## Parked
 
