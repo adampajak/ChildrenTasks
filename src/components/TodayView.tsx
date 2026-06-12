@@ -6,9 +6,10 @@ import { cn } from "@/lib/utils";
 interface Props {
   assignments: ScheduleAssignmentView[];
   onToggleComplete?: (id: string, completedAt: string | null) => void;
+  onFocusChild?: (child: { id: string; name: string }) => void;
 }
 
-export function TodayView({ assignments, onToggleComplete }: Props) {
+export function TodayView({ assignments, onToggleComplete, onFocusChild }: Props) {
   const today = new Intl.DateTimeFormat("en-CA").format(new Date());
   const todayAssignments = assignments.filter((a) => a.assignment_date === today);
 
@@ -28,7 +29,20 @@ export function TodayView({ assignments, onToggleComplete }: Props) {
         return (
           <Card key={child.id}>
             <CardHeader className="pb-2">
-              <CardTitle className="text-base">{child.name}</CardTitle>
+              <CardTitle className="text-base">
+                {onFocusChild ? (
+                  <button
+                    className="cursor-pointer hover:underline"
+                    onClick={() => {
+                      onFocusChild(child);
+                    }}
+                  >
+                    {child.name}
+                  </button>
+                ) : (
+                  child.name
+                )}
+              </CardTitle>
             </CardHeader>
             <CardContent>
               {chores.length === 0 ? (

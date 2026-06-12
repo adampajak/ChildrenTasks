@@ -31,7 +31,7 @@ Rodzic wielodzietnej rodziny potrzebuje narzędzia, które automatycznie generuj
 | S-02 | chores-crud | zdefiniować obowiązki (nazwa, kategoria wiekowa, częstotliwość, czas) | — | FR-002, US-01 | done |
 | S-03 | schedule-generation | wygenerować tygodniowy harmonogram i zobaczyć plan na dziś / cały tydzień | S-01, S-02 | FR-003, FR-004, US-01 | done |
 | S-04 | schedule-manual-adjust | ręcznie przenieść lub zmienić przypisanie po generacji | S-03 | FR-010, US-01 | proposed |
-| S-05 | child-daily-view | przełączyć na widok jednego dziecka z zadaniami na dziś | S-03 | FR-006 | proposed |
+| S-05 | child-daily-view | przełączyć na widok jednego dziecka z zadaniami na dziś | S-03 | FR-006 | done |
 | S-06 | task-completion | oznaczyć zadanie jako wykonane z dowolnego widoku | S-03 | FR-007 | done |
 
 ## Streams
@@ -119,7 +119,7 @@ Brak wyodrębnionych foundations. Wszystkie warstwy cross-cutting (auth, deploy,
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Minimalny — to filtrowanie istniejących danych po child_id + today. Brak nowych endpointów, jedynie nowy widok UI.
-- **Status:** proposed
+- **Status:** done
 
 ### S-06: Oznaczanie zadań jako wykonane
 
@@ -168,4 +168,5 @@ Known improvement items from impl-reviews — not blocking, but should be addres
 - **S-01: user can create, edit, and delete child profiles (name, age category, available time per weekday)** — Archived 2026-06-12 → `context/archive/2026-06-05-children-crud/`. Lesson: —.
 - **S-02: user can create, edit, and delete chores (name, age category [małe/średnie/duże], min weekly frequency, time to complete)** — Archived 2026-06-12 → `context/archive/2026-06-12-chores-crud/`. Lesson: —.
 - **S-03: user can generate a weekly chore schedule respecting age/time/frequency constraints, then view today's tasks across all children and the full weekly schedule** — Archived 2026-06-12 → `context/archive/2026-06-12-schedule-generation/`. Lesson: —.
+- **S-05: user can switch to a single child's view showing only that child's tasks for today** — Archived 2026-06-12 → `context/archive/2026-06-12-child-daily-view/`. Lesson: —.
 - **S-06: user can mark a task as done from any view (today view, weekly view, child view)** — Archived 2026-06-12 → `context/archive/2026-06-12-task-completion/`. Lesson: —.
