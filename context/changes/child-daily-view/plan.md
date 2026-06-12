@@ -119,15 +119,15 @@ interface Props {
 
 #### Automated
 
-- [x] 1.1 TypeScript build passes: `npm run build`
-- [x] 1.2 Lint passes: `npm run lint`
+- [x] 1.1 TypeScript build passes: `npm run build` — 7a52f83
+- [x] 1.2 Lint passes: `npm run lint` — 7a52f83
 
 #### Manual
 
-- [x] 1.3 Tapping child name in Dziś tab opens ChildDayView for that child
-- [x] 1.4 ChildDayView shows only that child's today chores, full-width
-- [x] 1.5 "← Wszystkie dzieci" returns to all-children card grid
-- [x] 1.6 Tab bar hidden when focused; visible when in all-children view
-- [x] 1.7 Wygeneruj ponownie button visible in both states
-- [x] 1.8 Switching to Ten tydzień and back to Dziś resets to all-children view
-- [x] 1.9 No regressions in Today view, WeekView, generate/regenerate
+- [x] 1.3 Tapping child name in Dziś tab opens ChildDayView for that child — 7a52f83
+- [x] 1.4 ChildDayView shows only that child's today chores, full-width — 7a52f83
+- [x] 1.5 "← Wszystkie dzieci" returns to all-children card grid — 7a52f83
+- [x] 1.6 Tab bar hidden when focused; visible when in all-children view — 7a52f83
+- [x] 1.7 Wygeneruj ponownie button visible in both states — 7a52f83
+- [x] 1.8 Switching to Ten tydzień and back to Dziś resets to all-children view — 7a52f83
+- [x] 1.9 No regressions in Today view, WeekView, generate/regenerate — 7a52f83
