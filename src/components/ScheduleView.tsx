@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSchedule } from "@/components/hooks/use-schedule";
+import { ChildDayView } from "@/components/ChildDayView";
 import { TodayView } from "@/components/TodayView";
 import { WeekView } from "@/components/WeekView";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ type Tab = "today" | "week";
 export function ScheduleView() {
   const { assignments, warnings, isLoading, isGenerating, error, generate } = useSchedule();
   const [activeTab, setActiveTab] = useState<Tab>("today");
+  const [focusedChild, setFocusedChild] = useState<{ id: string; name: string } | null>(null);
 
   if (isLoading) {
     return (
@@ -53,34 +55,61 @@ export function ScheduleView() {
       ) : (
         <div className="space-y-4">
           <div className="flex items-center justify-between gap-2">
-            <div className="flex rounded-lg border border-white/20 bg-white/10 p-0.5">
-              <button
-                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                  activeTab === "today" ? "bg-white/20 text-white" : "text-white/60 hover:text-white"
-                }`}
-                onClick={() => {
-                  setActiveTab("today");
-                }}
-              >
-                Dziś
-              </button>
-              <button
-                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                  activeTab === "week" ? "bg-white/20 text-white" : "text-white/60 hover:text-white"
-                }`}
-                onClick={() => {
-                  setActiveTab("week");
-                }}
-              >
-                Ten tydzień
-              </button>
-            </div>
+            {focusedChild ? (
+              <div className="flex items-center gap-3">
+                <button
+                  className="text-sm font-medium text-white/70 transition-colors hover:text-white"
+                  onClick={() => {
+                    setFocusedChild(null);
+                  }}
+                >
+                  ← Wszystkie dzieci
+                </button>
+                <span className="text-base font-semibold text-white">{focusedChild.name}</span>
+              </div>
+            ) : (
+              <div className="flex rounded-lg border border-white/20 bg-white/10 p-0.5">
+                <button
+                  className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                    activeTab === "today" ? "bg-white/20 text-white" : "text-white/60 hover:text-white"
+                  }`}
+                  onClick={() => {
+                    setActiveTab("today");
+                  }}
+                >
+                  Dziś
+                </button>
+                <button
+                  className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                    activeTab === "week" ? "bg-white/20 text-white" : "text-white/60 hover:text-white"
+                  }`}
+                  onClick={() => {
+                    setActiveTab("week");
+                    setFocusedChild(null);
+                  }}
+                >
+                  Ten tydzień
+                </button>
+              </div>
+            )}
             <Button variant="outline" size="sm" onClick={() => void generate()} disabled={isGenerating}>
               {isGenerating ? "Generowanie…" : "Wygeneruj ponownie"}
             </Button>
           </div>
 
-          {activeTab === "today" ? <TodayView assignments={assignments} /> : <WeekView assignments={assignments} />}
+          {activeTab === "today" && focusedChild ? (
+            <ChildDayView
+              child={focusedChild}
+              assignments={assignments}
+              onBack={() => {
+                setFocusedChild(null);
+              }}
+            />
+          ) : activeTab === "today" ? (
+            <TodayView assignments={assignments} onFocusChild={setFocusedChild} />
+          ) : (
+            <WeekView assignments={assignments} />
+          )}
         </div>
       )}
     </div>
