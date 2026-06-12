@@ -244,26 +244,26 @@ Note: `new Date().toISOString()` is correct here — this is an event timestamp 
 
 #### Automated
 
-- [x] 2.1 TypeScript build passes: `npm run build`
-- [x] 2.2 Lint passes: `npm run lint`
+- [x] 2.1 TypeScript build passes: `npm run build` — d206432
+- [x] 2.2 Lint passes: `npm run lint` — d206432
 
 #### Manual
 
-- [x] 2.3 PATCH with `completed_at` timestamp returns 200
-- [x] 2.4 PATCH with `null` returns 200 (undo)
-- [x] 2.5 Unauthenticated PATCH returns 401
+- [x] 2.3 PATCH with `completed_at` timestamp returns 200 — d206432
+- [x] 2.4 PATCH with `null` returns 200 (undo) — d206432
+- [x] 2.5 Unauthenticated PATCH returns 401 — d206432
 
 ### Phase 3: UI
 
 #### Automated
 
-- [ ] 3.1 TypeScript build passes: `npm run build`
-- [ ] 3.2 Lint passes: `npm run lint`
+- [x] 3.1 TypeScript build passes: `npm run build`
+- [x] 3.2 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 3.3 Tapping circle marks task done (strikethrough + dim)
-- [ ] 3.4 Tapping checkmark un-marks task
-- [ ] 3.5 Completion state visible in both TodayView and WeekView
-- [ ] 3.6 Full reload preserves completion state
-- [ ] 3.7 No regressions in Today view, WeekView, generate/regenerate
+- [x] 3.3 Tapping circle marks task done (strikethrough + dim)
+- [x] 3.4 Tapping checkmark un-marks task
+- [x] 3.5 Completion state visible in both TodayView and WeekView
+- [x] 3.6 Full reload preserves completion state
+- [x] 3.7 No regressions in Today view, WeekView, generate/regenerate

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 type Tab = "today" | "week";
 
 export function ScheduleView() {
-  const { assignments, warnings, isLoading, isGenerating, error, generate } = useSchedule();
+  const { assignments, warnings, isLoading, isGenerating, error, generate, toggleCompletion } = useSchedule();
   const [activeTab, setActiveTab] = useState<Tab>("today");
 
   if (isLoading) {
@@ -80,7 +80,11 @@ export function ScheduleView() {
             </Button>
           </div>
 
-          {activeTab === "today" ? <TodayView assignments={assignments} /> : <WeekView assignments={assignments} />}
+          {activeTab === "today" ? (
+            <TodayView assignments={assignments} onToggleComplete={toggleCompletion} />
+          ) : (
+            <WeekView assignments={assignments} onToggleComplete={toggleCompletion} />
+          )}
         </div>
       )}
     </div>

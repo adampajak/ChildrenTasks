@@ -1,4 +1,6 @@
+import { Circle, CheckCircle } from "lucide-react";
 import type { ScheduleAssignmentView } from "@/types";
+import { cn } from "@/lib/utils";
 
 const DAY_LABELS = ["Pon", "Wt", "Śr", "Czw", "Pt", "Sob", "Niedz"];
 
@@ -15,9 +17,10 @@ function formatDayHeader(dateStr: string, label: string): string {
 
 interface Props {
   assignments: ScheduleAssignmentView[];
+  onToggleComplete?: (id: string, completedAt: string | null) => void;
 }
 
-export function WeekView({ assignments }: Props) {
+export function WeekView({ assignments, onToggleComplete }: Props) {
   if (assignments.length === 0) return null;
 
   const weekStartDate = assignments[0].week_start_date;
@@ -60,7 +63,28 @@ export function WeekView({ assignments }: Props) {
                       <ul className="space-y-0.5">
                         {chores.map((a) => (
                           <li key={a.id} className="text-xs leading-snug">
-                            {a.chore_name}
+                            {onToggleComplete ? (
+                              <span className="flex items-center justify-center gap-1">
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    onToggleComplete(a.id, a.completed_at ? null : new Date().toISOString());
+                                  }}
+                                  className="text-muted-foreground hover:text-foreground shrink-0 transition-colors"
+                                >
+                                  {a.completed_at ? (
+                                    <CheckCircle className="h-4 w-4 text-green-500" />
+                                  ) : (
+                                    <Circle className="h-4 w-4" />
+                                  )}
+                                </button>
+                                <span className={cn(a.completed_at ? "line-through opacity-50" : "")}>
+                                  {a.chore_name}
+                                </span>
+                              </span>
+                            ) : (
+                              a.chore_name
+                            )}
                           </li>
                         ))}
                       </ul>
