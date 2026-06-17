@@ -470,13 +470,13 @@ Before running integration tests, the following must be true (not enforced by te
 
 #### Automated
 
-- [x] 2.1 `npm run test:integration` shows 7+ passing tests in `api-auth.test.ts`
-- [x] 2.2 `npm run lint` passes
+- [x] 2.1 `npm run test:integration` shows 7+ passing tests in `api-auth.test.ts` — eebffbb
+- [x] 2.2 `npm run lint` passes — eebffbb
 
 #### Manual
 
-- [x] 2.3 With local Supabase stopped, `npm run test:integration` fails with clear server startup error
-- [x] 2.4 All 7 tested endpoints return 401 in the test output
+- [x] 2.3 With local Supabase stopped, `npm run test:integration` fails with clear server startup error — eebffbb
+- [x] 2.4 All 7 tested endpoints return 401 in the test output — eebffbb
 
 ### Phase 3: Risk #1 — RLS Cross-Family Isolation Tests
 
