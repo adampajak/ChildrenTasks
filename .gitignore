@@ -20,6 +20,7 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+.env.test
 
 # cloudflare
 .dev.vars
@@ -32,3 +33,10 @@ pnpm-debug.log*
 .idea/
 idea-notes.md
 .claude/*
+auth.json
+
+# playwright
+.auth/
+playwright-report/
+test-results/
+.playwright-cli/*

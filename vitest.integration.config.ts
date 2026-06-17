@@ -3,10 +3,12 @@ import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
   test: {
-    name: "unit",
+    name: "integration",
     environment: "node",
     env: { TZ: "Europe/Warsaw" },
-    include: ["src/**/__tests__/**/*.test.ts"],
+    include: ["tests/integration/**/*.test.ts"],
+    globalSetup: ["tests/integration/global.setup.ts"],
+    testTimeout: 30000,
     passWithNoTests: true,
   },
   resolve: {

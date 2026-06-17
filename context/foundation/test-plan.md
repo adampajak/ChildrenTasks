@@ -71,8 +71,8 @@ orchestrator updates Status as artifacts appear on disk.
 
 | # | Phase name | Goal (one line) | Risks covered | Test types | Status | Change folder |
 |---|------------|-----------------|----------------|------------|--------|---------------|
-| 1 | Bootstrap + scheduler unit tests | Stand up Vitest; prove the scheduler's constraint rules and the local-date function with pure-function unit tests | #3, #6 | unit | change opened | context/changes/testing-bootstrap-scheduler |
-| 2 | Data isolation + API auth | Integration tests against local Supabase: RLS cross-family isolation, non-atomic schedule replace failure, API endpoints reject unauthenticated requests | #1, #2, #4 | integration | not started | — |
+| 1 | Bootstrap + scheduler unit tests | Stand up Vitest; prove the scheduler's constraint rules and the local-date function with pure-function unit tests | #3, #6 | unit | complete | context/changes/testing-bootstrap-scheduler |
+| 2 | Data isolation + API auth | Integration tests against local Supabase: RLS cross-family isolation, non-atomic schedule replace failure, API endpoints reject unauthenticated requests | #1, #2, #4 | integration | change opened | context/changes/testing-data-isolation-api |
 | 3 | UI component smoke tests | React component tests for TodayView, WeekView, ChildDayView — catch silent regressions in interactive flows | #5 | component (RTL + jsdom) | not started | — |
 | 4 | Quality gates wiring | Add unit + integration + component test steps to CI; add pre-commit typecheck hook | cross-cutting | CI / gates | not started | — |
 
