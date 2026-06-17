@@ -1,7 +1,7 @@
 ---
 change_id: testing-bootstrap-scheduler
 title: Scheduler unit tests covering age/time constraints and UTC date correctness
-status: implementing
+status: implemented
 created: 2026-06-17
 updated: 2026-06-17
 archived_at: null

@@ -413,5 +413,5 @@ date utilities, `src/lib/services/__tests__/scheduler.test.ts` for pure service 
 
 #### Manual
 
-- [x] 4.1 `context/foundation/lessons.md` has no placeholder text; rule body is complete
-- [x] 4.2 `context/foundation/test-plan.md §6.1` has a filled cookbook entry
+- [x] 4.1 `context/foundation/lessons.md` has no placeholder text; rule body is complete — 92de32c
+- [x] 4.2 `context/foundation/test-plan.md §6.1` has a filled cookbook entry — 92de32c
