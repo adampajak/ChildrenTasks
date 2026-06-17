@@ -402,16 +402,16 @@ date utilities, `src/lib/services/__tests__/scheduler.test.ts` for pure service 
 
 #### Automated
 
-- [x] 3.1 `npm run test:run` exits 0 with all tests passing (date + both scheduler tests)
-- [x] 3.2 `npm run lint` exits 0
+- [x] 3.1 `npm run test:run` exits 0 with all tests passing (date + both scheduler tests) — 433a23f
+- [x] 3.2 `npm run lint` exits 0 — 433a23f
 
 #### Manual
 
-- [x] 3.3 Test output names both scheduler scenarios and shows them green
+- [x] 3.3 Test output names both scheduler scenarios and shows them green — 433a23f
 
 ### Phase 4: Cleanup and Cookbook
 
 #### Manual
 
-- [ ] 4.1 `context/foundation/lessons.md` has no placeholder text; rule body is complete
-- [ ] 4.2 `context/foundation/test-plan.md §6.1` has a filled cookbook entry
+- [x] 4.1 `context/foundation/lessons.md` has no placeholder text; rule body is complete
+- [x] 4.2 `context/foundation/test-plan.md §6.1` has a filled cookbook entry

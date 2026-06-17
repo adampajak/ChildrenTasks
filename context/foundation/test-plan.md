@@ -123,7 +123,18 @@ the relevant rollout phase ships; before that, the sub-section reads
 
 ### 6.1 Adding a unit test (pure function)
 
-TBD — see §3 Phase 1. Will cover: scheduler constraint test, local-date function test.
+**File location**: `src/<area>/__tests__/<source>.test.ts`, co-located with the source file.
+Examples: `src/lib/__tests__/date.test.ts` for utilities in `src/lib/`, `src/lib/services/__tests__/scheduler.test.ts` for services.
+
+**Naming convention**: `describe` block = function name; `it` block = "returns X given Y" / "emits Z when N".
+
+**Timezone note**: All unit tests run under `TZ=Europe/Warsaw` (set in `vitest.config.ts` via `test.env`). For time-sensitive tests, pin the clock with `vi.useFakeTimers()` + `vi.setSystemTime(new Date("...Z"))` and restore it in `afterEach(() => vi.useRealTimers())`.
+
+**Run command**: `npm run test:run` (single pass) or `npm run test` (watch mode).
+
+**Reference tests**:
+- `src/lib/__tests__/date.test.ts` — date utility with fake-timer timezone simulation (Risk #6)
+- `src/lib/services/__tests__/scheduler.test.ts` — pure service function with invariant + edge-case assertions (Risk #3)
 
 ### 6.2 Adding an integration test (RLS / API)
 
