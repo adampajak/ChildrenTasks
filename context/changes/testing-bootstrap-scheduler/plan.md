@@ -377,26 +377,26 @@ date utilities, `src/lib/services/__tests__/scheduler.test.ts` for pure service 
 
 #### Automated
 
-- [x] 1.1 `npm run test:run` exits 0
-- [x] 1.2 `npm run lint` exits 0
-- [x] 1.3 `npm run build` exits 0
+- [x] 1.1 `npm run test:run` exits 0 — 9cd1508
+- [x] 1.2 `npm run lint` exits 0 — 9cd1508
+- [x] 1.3 `npm run build` exits 0 — 9cd1508
 
 #### Manual
 
-- [ ] 1.4 `npm run test` starts Vitest watch server without errors
+- [x] 1.4 `npm run test` starts Vitest watch server without errors
 
 ### Phase 2: Extract getTodayLocal() and Write the Risk #6 Test
 
 #### Automated
 
-- [ ] 2.1 `npm run test:run` exits 0 with date test passing
-- [ ] 2.2 `npm run lint` exits 0
-- [ ] 2.3 `npm run build` exits 0
+- [x] 2.1 `npm run test:run` exits 0 with date test passing
+- [x] 2.2 `npm run lint` exits 0
+- [x] 2.3 `npm run build` exits 0
 
 #### Manual
 
-- [ ] 2.4 TodayView renders today's tasks correctly in dev server
-- [ ] 2.5 ChildDayView filters to correct child on day view
+- [x] 2.4 TodayView renders today's tasks correctly in dev server
+- [x] 2.5 ChildDayView filters to correct child on day view
 
 ### Phase 3: Scheduler Constraint Tests
 

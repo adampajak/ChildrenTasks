@@ -2,6 +2,7 @@ import { Circle, CheckCircle } from "lucide-react";
 import type { ScheduleAssignmentView } from "@/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { getTodayLocal } from "@/lib/date";
 
 interface Props {
   assignments: ScheduleAssignmentView[];
@@ -10,7 +11,7 @@ interface Props {
 }
 
 export function TodayView({ assignments, onToggleComplete, onFocusChild }: Props) {
-  const today = new Intl.DateTimeFormat("en-CA").format(new Date());
+  const today = getTodayLocal();
   const todayAssignments = assignments.filter((a) => a.assignment_date === today);
 
   // All children who appear anywhere in the weekly schedule

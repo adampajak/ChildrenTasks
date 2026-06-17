@@ -1,4 +1,5 @@
 import type { ScheduleAssignmentView } from "@/types";
+import { getTodayLocal } from "@/lib/date";
 
 interface Props {
   child: { id: string; name: string };
@@ -7,7 +8,7 @@ interface Props {
 }
 
 export function ChildDayView({ child, assignments, onBack }: Props) {
-  const today = new Intl.DateTimeFormat("en-CA").format(new Date());
+  const today = getTodayLocal();
   const chores = assignments.filter((a) => a.child_id === child.id && a.assignment_date === today);
 
   return (

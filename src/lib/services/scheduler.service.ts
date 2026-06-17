@@ -18,7 +18,7 @@ export function getWeekStartDate(date: Date): Date {
 }
 
 function toISODate(date: Date): string {
-  return date.toISOString().split("T")[0];
+  return new Intl.DateTimeFormat("en-CA").format(date);
 }
 
 function addDays(date: Date, days: number): Date {
