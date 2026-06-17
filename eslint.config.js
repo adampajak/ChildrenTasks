@@ -75,5 +75,13 @@ export default tseslint.config(
   eslintPluginAstro.configs["flat/recommended"],
   ...eslintPluginAstro.configs["flat/jsx-a11y-recommended"],
   astroConfig,
+  {
+    files: ["tests/**/*.ts"],
+    rules: {
+      // fetch().json() returns `any` from DOM types; no-unsafe-* rules are too strict for test assertions
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+    },
+  },
   eslintPluginPrettier,
 );

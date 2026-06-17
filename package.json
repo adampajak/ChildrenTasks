@@ -13,7 +13,7 @@
     "test": "vitest",
     "test:run": "vitest run --project unit",
     "test:unit": "vitest run --project unit",
-    "test:integration": "vitest run --project integration",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
     "test:e2e": "playwright test"
   },
   "dependencies": {

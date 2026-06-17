@@ -457,26 +457,26 @@ Before running integration tests, the following must be true (not enforced by te
 
 #### Automated
 
-- [x] 1.1 `npm run test:unit` runs Phase 1 unit tests only, no integration files picked up
-- [x] 1.2 `npm run lint` passes on all new files
-- [x] 1.3 `supabase db reset` completes without error (seed.sql exists)
+- [x] 1.1 `npm run test:unit` runs Phase 1 unit tests only, no integration files picked up — 3f54323
+- [x] 1.2 `npm run lint` passes on all new files — 3f54323
+- [x] 1.3 `supabase db reset` completes without error (seed.sql exists) — 3f54323
 
 #### Manual
 
-- [x] 1.4 `npm run test:integration` with no integration test files exits 0 (passWithNoTests behavior)
-- [x] 1.5 `vitest run --project unit` and `vitest run --project integration` complete without cross-project interference
+- [x] 1.4 `npm run test:integration` with no integration test files exits 0 (passWithNoTests behavior) — 3f54323
+- [x] 1.5 `vitest run --project unit` and `vitest run --project integration` complete without cross-project interference — 3f54323
 
 ### Phase 2: Risk #4 — Unauthenticated API Access Tests
 
 #### Automated
 
-- [ ] 2.1 `npm run test:integration` shows 7+ passing tests in `api-auth.test.ts`
-- [ ] 2.2 `npm run lint` passes
+- [x] 2.1 `npm run test:integration` shows 7+ passing tests in `api-auth.test.ts`
+- [x] 2.2 `npm run lint` passes
 
 #### Manual
 
-- [ ] 2.3 With local Supabase stopped, `npm run test:integration` fails with clear server startup error
-- [ ] 2.4 All 7 tested endpoints return 401 in the test output
+- [x] 2.3 With local Supabase stopped, `npm run test:integration` fails with clear server startup error
+- [x] 2.4 All 7 tested endpoints return 401 in the test output
 
 ### Phase 3: Risk #1 — RLS Cross-Family Isolation Tests
 
