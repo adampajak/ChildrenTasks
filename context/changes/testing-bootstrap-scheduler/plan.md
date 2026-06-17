@@ -389,25 +389,25 @@ date utilities, `src/lib/services/__tests__/scheduler.test.ts` for pure service 
 
 #### Automated
 
-- [x] 2.1 `npm run test:run` exits 0 with date test passing
-- [x] 2.2 `npm run lint` exits 0
-- [x] 2.3 `npm run build` exits 0
+- [x] 2.1 `npm run test:run` exits 0 with date test passing — 7c022f8
+- [x] 2.2 `npm run lint` exits 0 — 7c022f8
+- [x] 2.3 `npm run build` exits 0 — 7c022f8
 
 #### Manual
 
-- [x] 2.4 TodayView renders today's tasks correctly in dev server
-- [x] 2.5 ChildDayView filters to correct child on day view
+- [x] 2.4 TodayView renders today's tasks correctly in dev server — 7c022f8
+- [x] 2.5 ChildDayView filters to correct child on day view — 7c022f8
 
 ### Phase 3: Scheduler Constraint Tests
 
 #### Automated
 
-- [ ] 3.1 `npm run test:run` exits 0 with all tests passing (date + both scheduler tests)
-- [ ] 3.2 `npm run lint` exits 0
+- [x] 3.1 `npm run test:run` exits 0 with all tests passing (date + both scheduler tests)
+- [x] 3.2 `npm run lint` exits 0
 
 #### Manual
 
-- [ ] 3.3 Test output names both scheduler scenarios and shows them green
+- [x] 3.3 Test output names both scheduler scenarios and shows them green
 
 ### Phase 4: Cleanup and Cookbook
 
